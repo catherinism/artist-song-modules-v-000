@@ -4,7 +4,7 @@ class Song
   extend Memorable
   extend Findable
   include Paramable
-  
+
   attr_accessor :name
   attr_reader :artist
 
@@ -19,6 +19,7 @@ class Song
   end
 
   def self.all
+    binding.pry
     @@songs
   end
 end
