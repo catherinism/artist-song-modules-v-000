@@ -18,7 +18,7 @@ include Memorable::InstanceMethods
   end
 
   def initialize
-    self.class.all << self
+  self.class.all << self
 end
 
   def add_song(song)
