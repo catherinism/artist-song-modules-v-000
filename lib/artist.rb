@@ -4,7 +4,7 @@ class Artist
   extend Memorable
   extend Findable
   include Paramable
-  
+
   attr_accessor :name
   attr_reader :songs
 
@@ -16,9 +16,10 @@ class Artist
     @songs = []
   end
 
-  def self.all
-    @@artists
-  end
+  def initialize
+    self.class.all << self
+    @songs = []
+end
 
   def add_song(song)
 
